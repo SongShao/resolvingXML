@@ -18,7 +18,12 @@
 @end
 
 @implementation ViewController
-
+-(NSMutableArray *)personArray{
+    if (_personArray == nil) {
+        _personArray = [[NSMutableArray alloc]init];
+    }
+    return _personArray;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -78,7 +83,7 @@
     //找到子节点
     NSArray *personElements = [rootElement elementsForName:@"Person"];
     
-    self.personArray = [[NSMutableArray alloc]initWithCapacity:3];
+//    self.personArray = [[NSMutableArray alloc]initWithCapacity:3];
     for (GDataXMLElement *element in personElements) {
         NSLog(@"%@",element);
         //创建人类
@@ -88,7 +93,7 @@
         person.height = [[[element elementsForName:@"height"]firstObject]stringValue];
         [self.personArray addObject:person];
     }
-    NSLog(@"%@",self.personArray[0]);
+    NSLog(@"%@",self.personArray);
 //    NSLog(@"%@",personElements);
 //    
 }
