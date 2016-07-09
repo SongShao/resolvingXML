@@ -17,6 +17,7 @@
 		0577CBEB1D30A1FE00B545EF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0577CBEA1D30A1FE00B545EF /* Person.m */; };
 		0577CBEF1D30AB2300B545EF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0577CBEE1D30AB2300B545EF /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0577CBF11D30ABB400B545EF /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0577CBF01D30ABB400B545EF /* libxml2.tbd */; };
+		0577CC201D31421E00B545EF /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0577CC1F1D31421E00B545EF /* NSArray+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		0577CBED1D30AB2300B545EF /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		0577CBEE1D30AB2300B545EF /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		0577CBF01D30ABB400B545EF /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		0577CC1E1D31421E00B545EF /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		0577CC1F1D31421E00B545EF /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		0577CBCF1D3099D700B545EF /* resolvingXML */ = {
 			isa = PBXGroup;
 			children = (
+				0577CC1D1D31421E00B545EF /* Log */,
 				0577CBEC1D30AB0600B545EF /* GDataXMLNode */,
 				0577CBD31D3099D700B545EF /* AppDelegate.h */,
 				0577CBD41D3099D700B545EF /* AppDelegate.m */,
@@ -102,6 +106,15 @@
 				0577CBEE1D30AB2300B545EF /* GDataXMLNode.m */,
 			);
 			name = GDataXMLNode;
+			sourceTree = "<group>";
+		};
+		0577CC1D1D31421E00B545EF /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				0577CC1E1D31421E00B545EF /* NSArray+Log.h */,
+				0577CC1F1D31421E00B545EF /* NSArray+Log.m */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +192,7 @@
 				0577CBD81D3099D700B545EF /* ViewController.m in Sources */,
 				0577CBD51D3099D700B545EF /* AppDelegate.m in Sources */,
 				0577CBEF1D30AB2300B545EF /* GDataXMLNode.m in Sources */,
+				0577CC201D31421E00B545EF /* NSArray+Log.m in Sources */,
 				0577CBEB1D30A1FE00B545EF /* Person.m in Sources */,
 				0577CBD21D3099D700B545EF /* main.m in Sources */,
 			);
