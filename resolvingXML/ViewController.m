@@ -11,7 +11,7 @@
 #import "GDataXMLNode.h"
 
 @interface ViewController ()<NSXMLParserDelegate>
-@property (nonatomic, retain) NSMutableArray *personArray;
+@property (nonatomic, strong) NSMutableArray *personArray;
 //创建内容接收遇到的文本内容
 @property (nonatomic, copy) NSString *string;
 @property (nonatomic, retain) Person *person;
@@ -66,7 +66,7 @@
     NSError *error = nil;
     NSString *content= [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
     if (error == nil) {
-        NSLog(@"%@",content);
+//        NSLog(@"%@",content);
     }else{
         NSLog(@"%@",error);
     }
@@ -77,19 +77,20 @@
     
     //找到子节点
     NSArray *personElements = [rootElement elementsForName:@"Person"];
+    
+    self.personArray = [[NSMutableArray alloc]initWithCapacity:3];
     for (GDataXMLElement *element in personElements) {
-//        NSLog(@"%@",element);
+        NSLog(@"%@",element);
         //创建人类
         Person *person = [[Person alloc] init];
         person.name = [[[element elementsForName:@"name"]firstObject]stringValue];
         person.age = [[[element elementsForName:@"age"]firstObject] stringValue];
         person.height = [[[element elementsForName:@"height"]firstObject]stringValue];
-        
         [self.personArray addObject:person];
     }
-    NSLog(@"%@",self.personArray);
+    NSLog(@"%@",self.personArray[0]);
 //    NSLog(@"%@",personElements);
-    
+//    
 }
 
 

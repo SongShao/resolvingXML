@@ -337,6 +337,7 @@
 				0577CBE61D3099D700B545EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
